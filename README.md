@@ -57,5 +57,3 @@ Er verschijnen ook classes op de body op momenten dat er geluiden worden afgespe
 ## Een eigen fragment
 
 Je kan er ook voor kiezen om een eigen, beter fragment te gebruiken. Je kan dan de nodige HTML en JavaScript genereren door gebruik te maken van [caption generator](https://cmda-minor-vid.github.io/web-typography-18-19/generator/) (in Google Chrome). 
-
-Als je de closed captions wil bewerken dan kan je een tool zoals [Amber Script](https://www.amberscript.com/en) gebruiken. Daar kan je exporteren als `.srt`, en die kan je weer door de generator halen.
