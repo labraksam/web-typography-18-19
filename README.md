@@ -1,59 +1,19 @@
 # Responsive Typography, 2018/2019
 
-Als je doof bent, of als je om een andere reden geen geluid kunt horen, dan mis je veel informatie als je een film kijkt. Knisperende voetstappen, langzaam aanzwellende muziek, nerveus getik op een deur, je hoort het natuurlijk allemaal niet. Nu bestaat er zoiets als *closed caption*, wat een type ondertiteling is waarbij ook dingen als omgevingsgeluiden en de muziek beschreven worden. Hierdoor krijgt een kijker die informatie wel binnen.
+README
 
-Alleen wordt die auditieve informatie nogal neutraal beschreven. Het geluid van huilend persoon zou bijvoorbeeld beschreven kunnen worden als *snikgeluid op de achtergrond*. En iemand die lacht zou geschreven kunnen worden als *iemand lacht.* Heel neutraal, bijna zakelijk, en bovendien allebei in precies hetzelfde neutrale lettertype. Terwijl het toch echt over twee heel verschillende emoties gaat. 
 
-Dat kan visueel sterker. 
+## Omschrijving van mijn product
+De film waar ik mee aan de slag ben gegaan is Blade Runner. Ik heb hier voor gekozen omdat ik heel weinig films heb gekeken in mijn leven en deze nog niet had gezien. Mij leek het wel een uitdaging om met een fragment aan de slag te gaan waar ik nog nooit naar gekeken heb. De geluiden die hierin verwerkt zaten spraken me ook aan en ik had hier in het begin gelijk een beeld bij hoe ik dit zou kunnen uitwerken. 
 
-En dat gaan jullie doen.
+Ik heb er uiteindelijk voor gekozen om voor alleen het eerste fragment te gaan die in het filmpje zit. De kennis die ik heb is nog niet maximaal en ik wilde eerst kijken hoe dit zou gaan uitpakken op een korter stuk. 
 
-## Leerdoelen
+Verder komt de film heel gefocust op mij over. Er gebeuren geen gekke onverwachte dingen. Hiermee heb ik ook rekening gehouden in mijn design. Mijn idee was om hierbij een design te maken wat overeenkomt van de sfeer in het fragment. De kleuren, omgeving en typografie zijn dan ook gemaakt in de sfeer die de film overbracht op mij. Het oogt rustig en zou de gene die niet kan horen goed moeten meenemen in de geluidsfragmenten die wij kunnen horen en voor deze persoon wegvallen. Denk hierbij aan de kleuren die ik heb toegepast, bewegingen als trillingen van het frame en alarm geluiden die ik heb proberen uit te werken in het design. 
 
-- Je kan de kennis over vormgeving die je hebt geleerd tijdens de minor technisch toepassen met behulp van CSS
-- Je kan verborgen nuance uit een audiotrack overtuigend vertalen naar visuele typografische beelden
-- Je kan je typografische keuzes onderbouwen.
-- Je hebt het experiment niet geschuwd
 
-## Typografische restricties
+## Feedback die ik heb gekregen en verwerkt heb
+Het was wat statisch en rustig kreeg ik te horen in de les. Ik heb hiermee geprobeerd om wat meer uit te pakken. Dus ik heb de typografie voornamelijk verandert, bewegend gemaakt, meer bewegende objecten toegevoegd en een duidelijk onderscheid gemaakt in de verschillende stemmen en kleuren hiervan. 
 
-Je *moet* kiezen, en je keuze moet je onderbouwen:
 
-### Optie 1: Systeemfont
-
-De eerste optie is dat je gebruik maakt van het zogenaamde *systeemfont* van degene die naar jouw werk kijkt. Dit font verschilt per operating system, en het verschilt soms zelfs per versie van het operating system. Het is ook aan te passen door de gebruiker zelf. In dit geval heb je beschikking over normal, **bold** en _italic_.
-
-### Optie 2: Brenner
-
-Je kan er ook voor kiezen om gebruik te maken van de complete Brenner familie. Dit is een zeer uitgebreid en uiterst flexibel font. [Hier kan je je verdiepen in dit font](https://www.typotheque.com/blog/brenner_an_unusual_typeface_family_with_distinct_voices). Als je kiest voor dit font dan heb je de beschikking over een *sans serif*, een *condensed*, een *serif*, een *monotype*, een *slab*, een *display* en een *script* versie. En veel van deze versies hebben varianten van *light* tot *bold*, en allemaal zowel *bold* als *italic*.
-
-Met Brenner zijn er natuurlijk veel en veel meer mogelijkheden dan met systeemfonts. Dat kan zowel een voordeel als een nadeel zijn.
-
-Voor een overzicht, zie [de brenner.pdf](brenner.pdf).
-
-## Het fragment
-
-Ik heb een fragment voorbereid. Het gaat om twee scenes uit *Blade Runner 2049*. De captions staan in de HTML, en ze verschijnen in sync met de video. [Kijk maar](closed-captions/index.html).
-
-### De captions
-
-De captions staan in de html, in het bestand index.html. Je kan aan elke paragraaf eventueel een of meer classes toevoegen. Bijvoorbeeld `voice1` of `voice2 soft`. Classes voeg je handmatig toe in de html.
-
-Met JavaScript worden er een paar dingen extra gedaan: 
-
-- er wordt aan elke paragraaf een unieke class toegevoegd (`p0`, `p1`, etc)
-- Elk woord wordt in een aparte `span` gezet. Hierdoor kan je elk woord apart stylen, en eventueel ook [na elkaar laten verschijnen](https://github.com/cmda-minor-vid/web-typography-18-19/blob/master/closed-captions/css.css#L41).
-
-### Tijdens het afspelen
-
-Tijdens het afspeelen wordt er een class `on` op de caption gezet als hij moet verschijnen, en een class `off` als hij klaar is. *Zowel class `on` als class `off` blijft op de caption staan!*
-
-De timimg van de captions kan je aanpassen in [closed-captions/captions.js](closed-captions/captions.js).
-
-Er verschijnen ook classes op de body op momenten dat er geluiden worden afgespeeld, zoals `sound1` en `sound2`. Je kan geluiden toevoegen in [closed-captions/sounds.js](closed-captions/sounds.js).
-
-*let op,* de geluiden zijn niet compleet, dit zal je zelf moeten aanvullen.
-
-## Een eigen fragment
-
-Je kan er ook voor kiezen om een eigen, beter fragment te gebruiken. Je kan dan de nodige HTML en JavaScript genereren door gebruik te maken van [caption generator](https://cmda-minor-vid.github.io/web-typography-18-19/generator/) (in Google Chrome). 
+## Algemene feedback op het vak
+Ik vind het een cool vak waarbij ik veel geleerd heb. Als je een vak krijgt wat een experiment kan je hier ook veel nieuwe dingen proberen waar ik in dit geval veel van geleerd heb. De nieuwe dingen die ik heb ontdekt zorgen voor kennis die je in het begin niet verwacht te krijgen door de lessen of het vak. Dit vind ik een goed teken. Verder heb ik niet alleen veel geleerd van het schrijven van CSS code en te kijken naar animaties en typografie, maar ook naar het probleemoplossen en de denkwijze achter de code en concept voor iemand die doof is. 
