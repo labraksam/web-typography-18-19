@@ -7,7 +7,7 @@ function onYouTubeIframeAPIReady() {
 		videoId: 'vrP-_T-h9YM',
 		playerVars: {
 			color: 'white', 
-            end: 78
+            end: 80
 		},
 		events: {
 			onReady: initialize

@@ -28,76 +28,140 @@ body {
 }
 
 .voice1 {
-	font-style: italic;
     position: absolute; 
     text-align: left;
     top: 10vh;
-    right: 20vw;
+    right: 10vw;
 }
 
 .voice2 {
+    font-family: Brenner Mono Bold;
+    font-weight: 800; 
     font-style: italic;
+    font-size: 1.8em;
     position: absolute; 
     bottom: 10vh;
     left: 10vw;
+    max-width: 100%; 
+    color: lightsalmon; 
+    text-shadow:
+       -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
 }
 
 
-p {
-    color: white;
-    white-space: nowrap;
+.voice3 {
+    font-style: normal; 
+    font-weight: 800; 
+    position: absolute;
+    bottom: 20vh; 
+    left: 15vh; 
+    font-size: 3em;
+    transition: visibility 0s 4s, opacity .1s linear;
+    transform: rotate(20deg);
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF;
 }
 
-.parent {
-     display: flex;
-    align-content: center;
-}
 
-#video-placeholder {
-    margin: auto;
-    margin-top: 175px; 
+.p1.on::before, .p3.on::before, .p4.on::before, .p5.on::before, .p7.on::before, .p9.on::before, .p12.on::before, .p15.on::before, .p18.on::before, .p20.on::before, .p23.on::before, .p26.on::before, .p29.on::before, .p31.on::before, .p34.on::before, .p37.on::before, .p39.on::before, .p41.on::before, .p42.on::before, .p43.on::before {
+    content: '- ';
+    color: white; 
 }
 
 
+/*https://codepen.io/branovaclav/pen/bpobbg*/
+.sound3::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 300px;
+  margin-left: -10px;
+  background-image: linear-gradient(
+    rgba(100, 27, 0, 0),
+    rgba(220, 20, 60, .7), rgba(100, 27, 0, 0));
+  animation: scanning 3s cubic-bezier(0,.31,.83,.67) forwards;
+    z-index: -1;
+}
+@keyframes scanning {
+    100% { transform: translate(0, -1000px); }
+}
 
-/*// youtube laten draaien // */
+
+/*https://codepen.io/branovaclav/pen/bpobbg*/
+.sound5::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 300px;
+  margin-left: -10px;
+  background-image: linear-gradient(
+    rgba(100, 27, 0, 0),
+    rgba(220, 20, 60, .7), rgba(100, 27, 0, 0));
+  animation: scanning1 3s cubic-bezier(0,.31,.83,.67) forwards;
+    z-index: -1;
+}
+@keyframes scanning1 {
+    100% { transform: translate(0, -1000px); }
+}
+
+
+/*https://codepen.io/branovaclav/pen/bpobbg*/
+.sound7::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 300px;
+  margin-left: -10px;
+  background-image: linear-gradient(
+    rgba(100, 27, 0, 0),
+    rgba(220, 20, 60, .7), rgba(100, 27, 0, 0));
+  animation: scanning2 3s cubic-bezier(0,.31,.83,.67) forwards;
+    z-index: -1;
+}
+@keyframes scanning2 {
+    100% { transform: translate(0, -1000px); }
+}
+
 /*
-.sound1 {
-    transform: rotate (160deg); 
+
+.voice1::before {
+    z-index: +1; 
+    position: absolute;
+    content: url('https://i.pinimg.com/originals/49/55/01/495501f797c32344524a27cdf9ae76f5.png');
+    transform: rotate(180deg);
+    animation: cells 3s cubic-bezier(0,.31,.83,.67) forwards;
 }
 */
 
-
-.voice1 {
-/*
-    margin: auto;
-    margin-top: -500px;
-    margin-left: 400px;
-*/
+url {
+    width: 2px; 
+    height: 2px;  
 }
 
-/*
-.voice1:nth-child(3) {
-    color: pink; }
+
+
+.sound0 {
+    animation: pulse 30s forwards; 
+}
+@keyframes pulse {
+    0% {
+        background-color: black;
+    }
     
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 2s, opacity 6s linear; 
-
+    100% {
+        background-color: darkgray;
+    }
+    
 }
-*/
-
-/*
-*/
 
 
-
-
+/*https://css-tricks.com/snippets/css/shake-css-keyframe-animation/*/
 .sound1 iframe {
     animation: shake 0.2s linear forwards 4;  
 }
-
-/*// youtube scherm verandering keyframes // */
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -117,36 +181,127 @@ p {
 }
 
 
-.sound0 {
-    animation: pulse 30s forwards; 
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow*/
+.sound2 iframe {
+    animation: alarm  3s linear forwards; 
 }
-
-@keyframes pulse {
-    0% {
-        background-color: black;
+@keyframes alarm {
+    10% {
+        filter: drop-shadow(0 0 10rem crimson);
+    }
+    
+    50% {
+        filter: drop-shadow(0 0 10rem black);
     }
     
     100% {
-        background-color: lightgray;
+        filter: none;
+    } 
+}
+
+/*https://www.gradient-animator.com/*/
+.sound8 {
+background: linear-gradient(91deg, #ffffff, #cecece, #ffffff);
+background-size: 600% 600%;
+
+animation: grey 10s ease forwards;   
+}
+
+@keyframes grey { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+/*Janne Jansen*/
+.sound9 iframe{
+    animation: beep 43s;
+    transform-origin: center;
+}
+
+@keyframes beep {
+    0% {
+        transform: scale(1);
+    } 
+    94% {
+        transform: scale(0.6);
+        
+    }
+    95% {
+        transform: scale(1);
+    }
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow*/
+.sound10 {
+    animation: green  3s linear forwards; 
+}
+
+@keyframes green {
+    10% {
+        filter: drop-shadow(0 0 10rem green);
+    }
+    
+    50% {
+        filter: drop-shadow(0 0 10rem lightgreen);
+    }
+    
+    100% {
+        filter: none;
     }
     
 }
+
+
+p {
+    color: white;
+}
+
+.parent {
+    display: flex;
+    align-content: center;
+}
+
+#video-placeholder {
+    margin: auto;
+    margin-top: 175px; 
+}
+
 
 .p0, .p2, .p8, .p10, .p11, .p13, .p14, .p16, .p17, .p19, .p21, .p22, .p24, .p25, .p27, .p28, .p30, .p32, .p33, .p35, .p36, .p38, .p40, .p44 {
     animation: fontchange .3s linear infinite;
+    background: black;
+    border-style: dashed; 
+    border-color: white; 
+    border-width: thin;
+    font-size: 1.3em;
+    padding: .2em;
 }
+
+
+/*https://stackoverflow.com/questions/16552397/css-how-to-add-white-space-before-elements-content*/
+.p0::before, .p2::before, .p8::before, .p10::before, .p11::before, .p13::before, .p14::before, .p16::before, .p17::before, .p19::before, .p21::before, .p22::before, .p24::before, .p25::before, .p27::before, .p28::before, .p30::before, .p32::before, .p33::before, .p35::before, .p36::before, .p38::before, .p40::before {
+    content: '\00a0 ';
+}
+
 
 @keyframes fontchange {
     0% {
-        font-family: "Brenner Sans";
-        font-style: italic; 
+        font-family: "Brenner Sans Medium";
+        font-style: italic;
+    }
+    30% {
+        font-family: "Brenner Sans Medium Italic";
+        font-style: normal;        
     }
     50% {
         font-family: "Brenner Sans";
-        font-style: normal;
+        font-style: italic;
+        color: #00cc00;
     }
     100% {
         font-family: "Brenner Sans";
+        font-style: normal; 
     }
 }
 
@@ -159,40 +314,19 @@ p {
     0% {
         font-family: "Brenner Sans";
         font-style: italic;
-        color: red; 
+        color: #BD2024; 
     }
     50% {
         font-family: "Brenner Sans";
         font-style: normal;
-        color: tomato;
+        color: #EE4130;
     }
     100% {
         font-family: "Brenner Sans";
-        color: indianred;
+        color: #D22C2B;
     }
 }
 
-
-
-
-.sound2 iframe {
-    animation: alarm  3s linear forwards 2; 
-}
-
-@keyframes alarm {
-    10% {
-        filter: drop-shadow(0 0 10rem crimson);
-    }
-    
-    50% {
-        filter: drop-shadow(0 0 10rem black);
-    }
-    
-    100% {
-        filter: none;
-    }
-    
-}
 
 
 
@@ -224,9 +358,7 @@ You probably want to change the styling.
 .p0.on span:nth-of-type(4) {
 	opacity: 1;
 	transition: 0s .7s;
-
     margin-right: -.25em;
-
 }
 .p0.on span:nth-of-type(5) {
 	opacity: 1;
@@ -257,6 +389,7 @@ You probably want to change the styling.
 .p0.on span:nth-of-type(11) {
 	opacity: 1;
 	transition: 0s 3.7s;
+    font-size: 2em;
 }
 
 .p1 span {
@@ -339,6 +472,15 @@ You probably want to change the styling.
 .p4.on span:nth-of-type(4) {
     opacity: 1;
 	transition: 0s .6s;
+    color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 }
 .p4.on span:nth-of-type(5) {
     opacity: 1;
@@ -351,6 +493,15 @@ You probably want to change the styling.
 .p4.on span:nth-of-type(7) {
     opacity: 1;
 	transition: 0s 2.0s;
+    color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 }
 
 .p5 span {
@@ -367,39 +518,41 @@ You probably want to change the styling.
 .p5.on span:nth-of-type(3) {
     opacity: 1;
 	transition: 0s .5s;
-
-
+    color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 }
+
 .p5.on span:nth-of-type(4) {
     opacity: 1;
 	transition: 0s 1s;
-
-
 }
 .p5.on span:nth-of-type(5) {
     opacity: 1;
 	transition: 0s 1.8s;
-
-
 }
+
 .p5.on span:nth-of-type(6) {
     opacity: 1;
 	transition: 0s 2.4s;
-
-
 }
+
 .p5.on span:nth-of-type(7) {
     opacity: 1;
 	transition: 0s 2.6s;
-
-
 }
+
 .p5.on span:nth-of-type(8) {
     opacity: 1;
 	transition: 0s 2.8s;
-
-
 }
+
 
 .p6 span {
     opacity: 0; 
@@ -486,8 +639,19 @@ You probably want to change the styling.
 .p7.on span:nth-of-type(11) {
     opacity: 1;
 	transition: 0s 3.8s;
+}
 
-
+.p9 {
+    opacity: 0;
+    color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 }
 
 .p10 span {
@@ -578,8 +742,15 @@ You probably want to change the styling.
 .p13.on span:nth-of-type(7) {
     opacity: 1;
 	transition: 0s .8s;
-
-
+            color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 }
 
 
@@ -1074,8 +1245,15 @@ You probably want to change the styling.
 .p38.on span:nth-of-type(2) {
     opacity: 1;
 	transition: 0s .3s;
-
-
+            color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 }
 .p38.on span:nth-of-type(3) {
     opacity: 1;
@@ -1095,7 +1273,15 @@ You probably want to change the styling.
 .p39.on span:nth-of-type(2) {
     opacity: 1;
 	transition: 0s .6s;
-
+        color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 
 }
 .p39.on span:nth-of-type(3) {
@@ -1182,7 +1368,15 @@ You probably want to change the styling.
 .p41.on span:nth-of-type(2) {
     opacity: 1;
 	transition: 0s .6s;
-
+        color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 
 }
 .p41.on span:nth-of-type(3) {
@@ -1204,7 +1398,15 @@ You probably want to change the styling.
 .p42.on span:nth-of-type(2) {
     opacity: 1;
 	transition: 0s .4s;
-
+        color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 
 }
 .p42.on span:nth-of-type(3) {
@@ -1226,8 +1428,15 @@ You probably want to change the styling.
 .p43.on span:nth-of-type(2) {
     opacity: 1;
 	transition: 0s .4s;
-
-
+        color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
 }
 .p43.on span:nth-of-type(3) {
     opacity: 1;
@@ -1242,12 +1451,22 @@ You probably want to change the styling.
 .p44.on span:first-of-type {
     opacity: 1;
 	transition: 0s;
-
-
 }
 .p44.on span:nth-of-type(2) {
     opacity: 1;
 	transition: 0s .4s;
-
-
 }
+
+
+.p8, .p11, .p14, .p17, .p9, .p12, .p15, .p18 {
+            color: #333; 
+    text-shadow:
+       -1px -1px 0 #FFF,  
+        1px -1px 0 #FFF,
+        -1px 1px 0 #FFF,
+         1px 1px 0 #FFF;
+    font-family: Brenner Sans;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
